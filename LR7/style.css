@@ -1,0 +1,56 @@
+/* Основні стилі */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: hotpink; /* Задаємо колір заголовку */
+  font-size: 2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: 10px dotted purple; /* Додаємо пунктирний бордер */
+}
+
+h2 {
+  font-size: 1.5em;
+  font-style: italic; /* Додаємо курсив */
+}
+
+.job-title {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Стилізація списку контактних даних */
+ul {
+  background-color: #eeeeee; /* Світло-сірий фон */
+  border: 5px solid purple; /* Фіолетовий суцільний бордер */
+  padding: 15px; /* Відступ між контентом і бордером */
+}
+
+a:link, a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  color: green; /* Колір посилань при наведенні */
+  text-decoration: none;
+}
+
+/* Стилізація блоку з текстом "Web Developer Far far away..." */
+#article {
+  background: url('star.svg') repeat-y right top;
+  background-attachment: scroll; /* Прокрутка фону разом з контентом */
+  border: 20px solid blue; /* Синій бордер */
+  border-width: 20px 15px; /* Бордер 20px зверху і знизу, 15px зліва і справа */
+  padding: 30px 3em 5px 3em; /* Відступ всередині блока */
+  height: 150px;
+  overflow-y: auto; /* Скролл тільки по вертикалі при переповненні */
+  margin: 30px 10px; /* Зовнішній відступ */
+  border-radius: 100px / 20px; /* Закруглення кутів */
+}
+
+/* Стилізація останнього абзацу в блоці */
+#article p:last-child {
+  direction: rtl; /* Напрямок тексту справа наліво */
+  color: rgb(47, 183, 68); /* Колір тексту */
+}

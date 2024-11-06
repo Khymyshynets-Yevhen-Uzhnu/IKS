@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог спортивних подій</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Каталог спортивних подій</h1>
+  </header>
+
+  <main>
+    <div class="filters">
+      <input type="text" id="search" placeholder="Пошук за назвою">
+      <select id="sportFilter">
+        <option value="">Всі види спорту</option>
+      </select>
+      <input type="date" id="startDate">
+      <input type="date" id="endDate">
+      <select id="locationFilter">
+        <option value="">Всі локації</option>
+      </select>
+      <button id="sortByName">Сортувати за назвою</button>
+      <button id="sortByDate">Сортувати за датою</button>
+    </div>
+
+    <div class="events-container" id="eventsContainer"></div>
+
+    <div class="modal" id="eventModal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2 id="modalEventName"></h2>
+        <div id="modalEventImage"></div>
+        <p id="modalEventDescription"></p>
+        <ul id="modalEventParticipants"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Химишинець Євген Вікторович</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

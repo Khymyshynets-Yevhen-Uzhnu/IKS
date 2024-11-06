@@ -1,0 +1,148 @@
+/* Основні стилі для сторінки */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+
+  /* Фонове зображення */
+  background-image: url("images/задній-фон.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі модального вікна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Дозволяє прокручувати вміст модального вікна */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  max-height: 90vh; /* Обмежуємо висоту вікна до 90% висоти екрану */
+  overflow-y: auto; /* Додаємо вертикальну прокрутку */
+}
+
+/* Стилі для скролбару всередині модального вікна */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+#modalEventImage {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modalEventImage img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#modalEventImage img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* Стилі для фільтрів і пошуку */
+#search, #sportFilter, #locationFilter, #startDate, #endDate, #sortByName, #sortByDate {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+#search:focus, #sportFilter:hover, #locationFilter:hover, #startDate:hover, #endDate:hover, #sortByName:hover, #sortByDate:hover {
+  outline: none;
+  box-shadow: 0 0 8px rgba(51, 51, 51, 0.5);
+  transform: scale(1.05);
+}
